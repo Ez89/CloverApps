@@ -53,7 +53,6 @@ class _DetailProductState extends State<DetailProduct> {
                           borderRadius: BorderRadius.circular(defaultRadius),
                           image: DecorationImage(
                             image: NetworkImage(widget.product.photos![0].url!),
-                            filterQuality: FilterQuality.low,
                           ),
                         ),
                         width: double.infinity,
@@ -70,22 +69,22 @@ class _DetailProductState extends State<DetailProduct> {
                 )
                 .toList(),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: widget.product.photos!.map((urlOfItem) {
-              int index = widget.product.photos!.indexOf(urlOfItem);
-              return Container(
-                width: 8,
-                height: 8,
-                margin:
-                    const EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: currentIndex == index ? kPrimaryColor : borderColor,
-                ),
-              );
-            }).toList(),
-          )
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: widget.product.photos!.map((urlOfItem) {
+          //     int index = widget.product.photos!.indexOf(urlOfItem);
+          //     return Container(
+          //       width: 8,
+          //       height: 8,
+          //       margin:
+          //           const EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+          //       decoration: BoxDecoration(
+          //         shape: BoxShape.circle,
+          //         color: currentIndex == index ? kPrimaryColor : borderColor,
+          //       ),
+          //     );
+          //   }).toList(),
+          // )
         ],
       );
     }
@@ -176,8 +175,8 @@ class _DetailProductState extends State<DetailProduct> {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            Text(
+              widget.product.description!,
             ),
           ],
         ),
@@ -225,15 +224,31 @@ class _DetailProductState extends State<DetailProduct> {
       appBar: AppBar(
         actions: [
           IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.share,
+              color: kBlackColor,
+              size: 24,
+            ),
+          ),
+          IconButton(
             onPressed: () {
               Navigator.pushNamed(context, '/cart');
             },
             icon: Icon(
               Icons.shopping_cart_outlined,
-              color: kPrimaryColor,
-              size: 30,
+              color: kBlackColor,
+              size: 24,
             ),
-          )
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.menu_rounded,
+              color: kBlackColor,
+              size: 24,
+            ),
+          ),
         ],
         automaticallyImplyLeading: false,
         title: Text(
@@ -250,7 +265,7 @@ class _DetailProductState extends State<DetailProduct> {
           icon: Icon(
             Icons.chevron_left,
             color: kBlackColor,
-            size: 30,
+            size: 24,
           ),
         ),
         bottom: PreferredSize(

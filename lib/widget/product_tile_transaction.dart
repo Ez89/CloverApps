@@ -1,10 +1,9 @@
-import 'package:clover/model/cart_model.dart';
 import 'package:clover/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class productiletransaction extends StatelessWidget {
+class ProductTileTransaction extends StatelessWidget {
   // final CartModel cart;
-  const productiletransaction({
+  const ProductTileTransaction({
     Key? key,
     // required this.cart,
   }) : super(key: key);

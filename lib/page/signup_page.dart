@@ -185,7 +185,7 @@ class _SignUpPageState extends State<SignUpPage> {
     }
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: kBackgroundColor,
       body: SafeArea(
         child: Form(
@@ -194,7 +194,7 @@ class _SignUpPageState extends State<SignUpPage> {
             margin: EdgeInsets.symmetric(
               horizontal: defaultMargin,
             ),
-            child: Column(
+            child: ListView(
               children: [
                 const SizedBox(height: 30),
                 header(),
@@ -202,8 +202,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 const SizedBox(height: 30),
                 buttonRegister(),
                 const Spacer(),
+                const SizedBox(height: 20),
                 bottomContent(),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
               ],
             ),
           ),

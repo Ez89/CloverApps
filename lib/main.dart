@@ -1,6 +1,8 @@
 // ignore_for_file: unused_import
 
 import 'package:clover/page/cart_page.dart';
+import 'package:clover/page/chat_page.dart';
+import 'package:clover/page/detail_chat_page.dart';
 import 'package:clover/page/detail_product_page.dart';
 import 'package:clover/page/forgot_password_page.dart';
 import 'package:clover/page/forgot_password_success.dart';
@@ -66,6 +68,8 @@ class MyApp extends StatelessWidget {
           '/resetpassword': (context) => const ResetPassword(),
           '/otp': (context) => const OtpRegisterPage(),
           '/profile': (context) => const ProfileScreen(),
+          '/chat': (context) => const ChatPage(),
+          '/chat_detail': (context) => const DetailChatPage(),
         },
       ),
     );

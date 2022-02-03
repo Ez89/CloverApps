@@ -60,18 +60,31 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(width: 16),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/cart');
+                Navigator.pushNamed(
+                  context,
+                  ('/cart'),
+                );
               },
-              child: Image.asset(
-                'assets/icon_cart.png',
-                width: 24,
+              child: Icon(
+                Icons.shopping_cart_outlined,
+                color: kGreyColor,
+                size: 24,
               ),
             ),
             const SizedBox(width: 16),
-            Image.asset(
-              'assets/icon_notification.png',
-              width: 24,
-            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  ('/chat'),
+                );
+              },
+              child: Icon(
+                Icons.message_outlined,
+                color: kGreyColor,
+                size: 24,
+              ),
+            )
           ],
         ),
       );

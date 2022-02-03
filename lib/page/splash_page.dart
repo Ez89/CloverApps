@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:clover/page/login_page.dart';
 import 'package:clover/page/main_page.dart';
 import 'package:clover/page/onboarding_page.dart';
 import 'package:clover/provider/auth_provider.dart';
@@ -64,8 +63,8 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 253,
-              height: 65,
+              width: 220,
+              height: 50,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image_logo.png'),

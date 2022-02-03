@@ -59,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
           CustomProfileTile(
             title: 'Email',
             iconUrl: 'assets/Message.png',
-            information: 'Email',
+            information: 'ez@gmail.com',
           ),
           CustomProfileTile(
             title: 'Telepon',

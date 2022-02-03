@@ -2,8 +2,8 @@
     package="com.example.clover">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="clover"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Clover market"
+        android:icon="@mipmap/ic_launcher">  
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

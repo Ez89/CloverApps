@@ -231,7 +231,7 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -239,8 +239,7 @@ class _LoginPageState extends State<LoginPage> {
             margin: EdgeInsets.symmetric(
               horizontal: defaultMargin,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: ListView(
               children: [
                 const SizedBox(height: 20),
                 header(),
@@ -252,9 +251,9 @@ class _LoginPageState extends State<LoginPage> {
                 divider(),
                 const SizedBox(height: 20),
                 buttonOauth(),
-                const Spacer(),
+                const SizedBox(height: 20),
                 bottomContent(),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
               ],
             ),
           ),
